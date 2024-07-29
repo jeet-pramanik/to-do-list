@@ -1,0 +1,166 @@
+/* Global Styles */
+* {
+  font-family: "Poppins", "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #202124;
+}
+
+/* Typography Styles */
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: "Press Start 2P", system-ui;
+}
+
+/* Root Container */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  background: linear-gradient(to right, #ff9a9e, #fecfef, #fe99ff, #fe9999);
+  gap: 14px;
+}
+/* Heading Styles */
+h1 {
+  font-size: 2.5em;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  color: #ff9a9e; /* A color that complements the gradient */
+}
+/* Header and Main Containers */
+header,
+.main {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  background: white;
+  min-width: 0; /* Ensure input scales properly */
+}
+
+header button {
+  border-radius: 14px;
+  background: transparent;
+  transition-duration: 200ms;
+  cursor: pointer;
+  padding: 14px 18px;
+  border: none;
+  background: white;
+  min-width: 0; /* Ensure button scales properly */
+}
+
+header button:hover {
+  opacity: 0.7;
+}
+
+/* Main Content Styles */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Todo Item Styles */
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: white;
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.actionsContainer button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.actionsContainer button:hover {
+  opacity: 0.7;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 640px) {
+  header button,
+  header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  #root {
+    padding: 20px;
+  }
+
+  header,
+  .main {
+    max-width: 1000px;
+  }
+
+  header button,
+  header input {
+    padding: 16px 20px;
+  }
+
+  .todoItem {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #root {
+    padding: 24px;
+  }
+
+  header,
+  .main {
+    max-width: 1200px;
+  }
+
+  header button,
+  header input {
+    padding: 18px 22px;
+  }
+
+  .todoItem {
+    padding: 18px;
+  }
+}
